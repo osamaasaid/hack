@@ -1,0 +1,20 @@
+body {
+  margin: 0 auto;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.thead {
+  background-color: #ff6600;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 10px;
+}
+
+a {
+  padding: 5px;
+}
+
+#right {
+  float: right;
+  padding-right: 5px;
+}
