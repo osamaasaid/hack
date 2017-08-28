@@ -3,15 +3,21 @@ body {
   font-family: Verdana, Geneva, sans-serif;
 }
 
-.thead {
+.top {
   background-color: #ff6600;
   margin: 0 auto;
   width: 90%;
-  margin-top: 10px;
+  padding: 0px;
+}
+
+#logo {
+  border: solid white 1px;
+  height: 18px;
+  width: 18px;
 }
 
 a {
-  padding: 5px;
+  padding-right: 5px;
 }
 
 #right {
