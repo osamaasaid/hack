@@ -3,12 +3,11 @@ body {
   font-family: Verdana, Geneva, sans-serif;
 }
 
-.top {
-  background-color: #ff6600;
-  margin: 0 auto;
-  width: 90%;
-  padding: 0px;
+
+.img {
+  border: 1px solid white;
 }
+
 
 #logo {
   border: solid white 1px;

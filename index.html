@@ -2,43 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>HackerNews</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 <body>
-    <table class="top">
-      <tbody>
-        <tr>
-           <td id="logo"> <img src="y18.gif" alt="" width="18px" height="18px"></td>
-           <td>
-            <span>
-             <b>
-              <a href="">HackerNews</a>
-             </b>
-              |
-              <a href="">Threads</a>
-              |
-              <a href="">Comment</a>
-              |
-              <a href="">Show</a>
-              |
-              <a href="">Ask</a>
-              |
-              <a href="">Jobs</a>
-              |
-              <a href="">Submit</a>
-            </span>
-          </td>
-          <td id="right">
-            <span>
-              <a href="">Login</a>
-            </span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-<script src=></script>
+  <div class="container">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color: #ff6600;">
+        <a class="navbar-brand" href="#">
+         <img src="y18.gif" width="30" height="30" alt="">
+        </a>
+        <a class="navbar-brand" href="#">Hacker News</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> Welcome<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">New  |</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Threads  |</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Comments  |</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Show  |</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Jobs  |</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Ask</a>
+              </li>
+            </ul>
+          <form class="form-inline my-2 my-lg-0 primary">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Login</button>
+          </form>
+        </div>
+      </nav>
+        <div class="content">
+          <p>content</p>
+        </div>
+  </div>
+
+<script src="app.js"></script>
 </body>
 </html>
-
-
