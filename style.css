@@ -1,25 +1,17 @@
 body {
-  margin: 0 auto;
   font-family: Verdana, Geneva, sans-serif;
 }
-
 
 .img {
   border: 1px solid white;
 }
 
+.navbar {
+  background-color: #ff6600;
+}
 
 #logo {
   border: solid white 1px;
   height: 18px;
   width: 18px;
-}
-
-a {
-  padding-right: 5px;
-}
-
-#right {
-  float: right;
-  padding-right: 5px;
 }
