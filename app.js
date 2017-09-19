@@ -1,8 +1,6 @@
-
 // store final results in this object
 var hashTable = {};
-var url = "https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty"
-
+var url = "https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty"
 // ajax function, cb = callback
 function xhr(url, cb) {
     var xmlHttp = new XMLHttpRequest();
@@ -14,7 +12,6 @@ function xhr(url, cb) {
     xmlHttp.open('GET', url, true);
     xmlHttp.send(null);
 }
-
 // grab 30 stories
 function newStories(responseText) {
     // parse the json file
@@ -27,42 +24,43 @@ function newStories(responseText) {
         xhr(`https://hacker-news.firebaseio.com/v0/item/${storyID}.json?print=pretty`, storyInfo);
     }
 }
-
-
-// execute here
-runAll()
-
 function storyInfo(responseText) {
     var stories = JSON.parse(responseText);
     hashTable[stories.id] = stories;
-    // console.log(hashTable);
-    console.log(stories.title)
-    console.log(stories.url)
-    console.log(stories.score)
-    console.log(stories.by)
-    console.log(stories.kids)
-
-
+    //info related to the stories
+    var storyTitle = stories.title;
+    var storyUrl = stories.url;
+    var storyScore = stories.score;
+    var storyAuthor = stories.by;
+    var storyComments = stories.kids;  //ToDo: Be able to display comments
+    var commentCount = stories.descendants;
+    var unixTime = stories.time;
+    var realTime = new Date(unixTime * 1000); //ToDo: Change to "hours ago" rather than full timestamp
+    //Append to DOM
+    var htmlNews = '';
+    for (var key in stories) {
+        htmlNews =
+        `
+         <div class="row">
+            <ul>
+               <li>
+                 <p> <a href="${storyUrl} id="title">${storyTitle}</a> </p>
+                 <p>${storyScore} points by ${storyAuthor} | <a href="https://hacker-news.firebaseio.com/v0/item/${storyComments}.json?print=pretty">${commentCount} comments</a> | ${realTime} </p>
+               </li>
+            </ul>
+         </div>
+        `
     }
+    $('#news').append(htmlNews);
+    }
+
 // run everything
 function runAll() {
     xhr(url, newStories);
 }
+runAll()
 
-//Create the new links
-    //story's title
-    // var p = document.getElementById('news').appendChild('');
-    // var story =  `<p>${stories.title}</p>`
-    // console.log(stories.title)
-    // p.innerHTML =  story ;
 
-    // var link = document.getElementById("storyUrl");
-    // var storyLink = `${stories.url}`;
-    // link.innerHTML = storyLink;
 
-    // //points for the story
-    // var rank = document.getElementById('score');
-    // var score = `<p> ${stories.score} ${  stories.score < 2 ? '<span>Point</span>': 'Points'} </p>`;
-    // rank.innerHTML = score;
 
 
